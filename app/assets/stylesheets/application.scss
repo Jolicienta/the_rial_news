@@ -1,0 +1,46 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import 'bootstrap';
+
+// Establece los colores principales
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Establece el tamaño de letra base
+$base-font-size: 16px;
+
+// Define estilos para la vista de posts
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .post {
+    width: 45%;
+    margin-bottom: 2rem;
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .post-title {
+      font-size: $base-font-size * 1.5;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .post-author {
+      font-size: $base-font-size;
+      color: $secondary-color;
+      margin-bottom: 0.5rem;
+    }
+    .post-date {
+      font-size: $base-font-size;
+      color: $secondary-color;
+    }
+    .post-body {
+      font-size: $base-font-size;
+      line-height: 1.5;
+      margin-top: 1rem;
+    }
+  }
+}

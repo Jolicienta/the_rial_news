@@ -1,0 +1,12 @@
+<div>
+    <% @comments.reverse_each do |comment| %>
+        <div>
+            <% if current_user %>
+                <strong><%= comment.user.name %></strong>
+            <% else %>
+                <strong>Anónimo</strong>
+            <% end %>
+            <p><%= comment.content %></p>
+        </div>
+    <% end %>
+</div>
